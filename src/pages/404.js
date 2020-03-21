@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
 import classes from "../css/error.module.css"
-import { Link } from "gatsby"
 import Banner from "../components/Banner"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 function error() {
   return (
     <Layout>
       <header className={classes.error}>
         <Banner title="this page does not exist">
-          <Link to="/" className="btn-white">Go home</Link>
+          <AniLink to="/" className="btn-white">Go home</AniLink>
         </Banner>
       </header>
     </Layout>

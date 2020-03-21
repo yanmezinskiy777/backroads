@@ -1,17 +1,39 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SimpleHero from "../components/SimpleHero"
+import StyledHero from "../components/Home/StyledHero"
 import Banner from "../components/Banner"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import About from "../components/Home/About"
+import Servises from "../components/Home/Servises"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import FeaturedTours from "../components/Home/FeaturedTours"
 
-export default () => (
+export default function index({data}) {
+  
+  return(
   <Layout>
-    <SimpleHero>
+    <StyledHero home="true" img={data.bg.childImageSharp.fluid}>
       <Banner title="continue exploring" info="You can check tours">
-        <Link to="/tours" className="btn-white">
+        <AniLink to="/tours" className="btn-white">
           explore tours
-        </Link>
+        </AniLink>
       </Banner>
-    </SimpleHero>
+    </StyledHero>
+    <About />
+    <Servises />
+    <FeaturedTours />
   </Layout>
 )
+}
+
+export const query = graphql`
+  query {
+     bg: file(relativePath: { eq: "defaultBcg.jpeg" }){
+    childImageSharp{
+      fluid(maxWidth:4000 quality:100){
+        ...GatsbyImageSharpFluid
+      }
+    }
+   }
+   }
+`

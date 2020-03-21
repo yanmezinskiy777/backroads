@@ -4,7 +4,7 @@ import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import sohial from "../constants/sohial"
 import logo from "../images/logo.svg"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
@@ -36,7 +36,7 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <Link to={item.path}>{item.text}</Link>
+                <AniLink fade to={item.path}>{item.text}</AniLink>
               </li>
             )
           })}

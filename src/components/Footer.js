@@ -2,7 +2,7 @@ import React from "react"
 import classes from "../css/footer.module.css"
 import sohial from "../constants/sohial"
 import links from "../constants/links"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Footer = () => {
   return (
@@ -10,9 +10,9 @@ const Footer = () => {
       <div className={classes.links}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path}>
+            <AniLink key={index} to={item.path}>
               {item.text}
-            </Link>
+            </AniLink>
           )
         })}
       </div>
