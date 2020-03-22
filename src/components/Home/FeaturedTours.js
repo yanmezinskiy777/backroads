@@ -25,7 +25,6 @@ const getTours = graphql`
     }
   }
 }
-
 `
 
 const FeaturedTours = () => {
@@ -35,9 +34,11 @@ const FeaturedTours = () => {
     return (
         <section className={classes.tours}>
             <Title title="featured" subtitle="tours" />
+            <div className={classes.center}>
             {tours.map(({node})=>{
                 return <Tour key={node.contentful_id} tour={node} />
             })}
+            </div>
            
             <AniLink fade to="/tours" className="btn-primary">all tours</AniLink>
         </section>
