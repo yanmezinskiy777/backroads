@@ -7,11 +7,13 @@ import About from "../components/Home/About"
 import Servises from "../components/Home/Servises"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import FeaturedTours from "../components/Home/FeaturedTours"
+import Seo from "../components/seo"
 
 export default function index({data}) {
   
   return(
   <Layout>
+    <Seo title="Home" description="home backrods description" />
     <StyledHero home="true" img={data.bg.childImageSharp.fluid}>
       <Banner title="continue exploring" info="You can check tours">
         <AniLink to="/tours" className="btn-white">

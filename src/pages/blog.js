@@ -3,10 +3,12 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import StyledHero from "../components/Home/StyledHero";
 import BlogList from "../components/Blog/BlogList";
+import Seo from "../components/seo"
 
 export default function blog({ data }) {
   return (
     <Layout>
+      <Seo title="Blog" />
       <StyledHero img={data.bg.childImageSharp.fluid} />
       <BlogList />
     </Layout>

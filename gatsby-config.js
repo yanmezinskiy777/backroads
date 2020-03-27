@@ -6,7 +6,8 @@ module.exports = {
     title: "BackRoads",
     description: "Explore awsome places and discover what makes each of unique.",
     author: "@Yan",
-    imgae: "/defaultBcg.jpeg"
+    imgae: "/defaultBcg.jpeg",
+    siteUrl: "https://silly-darwin-d396b3.netlify.com"
   },
   plugins: [`gatsby-plugin-sass`,`gatsby-plugin-styled-components`,
   {

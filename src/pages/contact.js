@@ -3,12 +3,12 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import StyledHero from "../components/Home/StyledHero"
 import Contact from "../components/Contact/Contact"
+import Seo from "../components/seo"
 
 export default function contact(props) {
-  console.log(props)
-const bg = props.data.bg.childImageSharp.fluid
-  console.log(bg)
+  const bg = props.data.bg.childImageSharp.fluid
   return <Layout>
+  <Seo title="Contact" />
   <StyledHero img={bg}>
   </StyledHero>
   <Contact/>
