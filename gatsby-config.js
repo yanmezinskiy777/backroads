@@ -6,7 +6,7 @@ module.exports = {
     title: "BackRoads",
     description: "Explore awsome places and discover what makes each of unique.",
     author: "@Yan",
-    keys: ['tours', 'places']
+    imgae: "/defaultBcg.jpeg"
   },
   plugins: [`gatsby-plugin-sass`,`gatsby-plugin-styled-components`,
   {
@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`
 ],
 }
